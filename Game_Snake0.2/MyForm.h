@@ -183,9 +183,10 @@ namespace GameSnake02 {
 			// groupBoxGameData
 			// 
 			this->groupBoxGameData->Controls->Add(this->labelScore);
+			this->groupBoxGameData->ForeColor = System::Drawing::SystemColors::MenuHighlight;
 			this->groupBoxGameData->Location = System::Drawing::Point(12, 27);
 			this->groupBoxGameData->Name = L"groupBoxGameData";
-			this->groupBoxGameData->Size = System::Drawing::Size(244, 40);
+			this->groupBoxGameData->Size = System::Drawing::Size(244, 44);
 			this->groupBoxGameData->TabIndex = 2;
 			this->groupBoxGameData->TabStop = false;
 			this->groupBoxGameData->Text = L"Данные игры";
@@ -195,6 +196,7 @@ namespace GameSnake02 {
 			this->labelScore->AutoSize = true;
 			this->labelScore->Font = (gcnew System::Drawing::Font(L"Microsoft Yi Baiti", 11.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->labelScore->ForeColor = System::Drawing::SystemColors::MenuHighlight;
 			this->labelScore->Location = System::Drawing::Point(6, 16);
 			this->labelScore->Name = L"labelScore";
 			this->labelScore->Size = System::Drawing::Size(49, 15);
@@ -208,6 +210,7 @@ namespace GameSnake02 {
 			this->groupBoxSettings->Controls->Add(this->label2);
 			this->groupBoxSettings->Font = (gcnew System::Drawing::Font(L"Microsoft Yi Baiti", 11.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->groupBoxSettings->ForeColor = System::Drawing::SystemColors::WindowFrame;
 			this->groupBoxSettings->Location = System::Drawing::Point(142, 346);
 			this->groupBoxSettings->Name = L"groupBoxSettings";
 			this->groupBoxSettings->Size = System::Drawing::Size(267, 82);
@@ -247,7 +250,7 @@ namespace GameSnake02 {
 			// 
 			// UpperBorder
 			// 
-			this->UpperBorder->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->UpperBorder->BackColor = System::Drawing::SystemColors::MenuHighlight;
 			this->UpperBorder->Location = System::Drawing::Point(0, 61);
 			this->UpperBorder->Name = L"UpperBorder";
 			this->UpperBorder->Size = System::Drawing::Size(550, 10);
@@ -256,7 +259,7 @@ namespace GameSnake02 {
 			// 
 			// LowerBorder
 			// 
-			this->LowerBorder->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->LowerBorder->BackColor = System::Drawing::SystemColors::MenuHighlight;
 			this->LowerBorder->Location = System::Drawing::Point(0, 601);
 			this->LowerBorder->Name = L"LowerBorder";
 			this->LowerBorder->Size = System::Drawing::Size(550, 10);
@@ -265,7 +268,7 @@ namespace GameSnake02 {
 			// 
 			// LeftBorder
 			// 
-			this->LeftBorder->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->LeftBorder->BackColor = System::Drawing::SystemColors::MenuHighlight;
 			this->LeftBorder->Location = System::Drawing::Point(0, 61);
 			this->LeftBorder->Name = L"LeftBorder";
 			this->LeftBorder->Size = System::Drawing::Size(10, 550);
@@ -274,7 +277,7 @@ namespace GameSnake02 {
 			// 
 			// RightBorder
 			// 
-			this->RightBorder->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->RightBorder->BackColor = System::Drawing::SystemColors::MenuHighlight;
 			this->RightBorder->Location = System::Drawing::Point(540, 61);
 			this->RightBorder->Name = L"RightBorder";
 			this->RightBorder->Size = System::Drawing::Size(10, 550);
@@ -287,7 +290,7 @@ namespace GameSnake02 {
 			// 
 			// labelGameOver
 			// 
-			this->labelGameOver->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->labelGameOver->BackColor = System::Drawing::SystemColors::GrayText;
 			this->labelGameOver->Font = (gcnew System::Drawing::Font(L"Microsoft Yi Baiti", 15.75F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->labelGameOver->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
@@ -303,6 +306,7 @@ namespace GameSnake02 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->ClientSize = System::Drawing::Size(550, 611);
 			this->Controls->Add(this->labelGameOver);
 			this->Controls->Add(this->RightBorder);
