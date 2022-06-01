@@ -76,7 +76,7 @@ void GameSnake02::MyForm::Eating()
 
 		Snake[score] = gcnew PictureBox();
 		Snake[score]->Location = Point(Snake[score - 1]->Location.X + step * direction.X, Snake[score - 1]->Location.Y - step * direction.Y);
-		Snake[score]->BackColor = Color::Red;
+		Snake[score]->BackColor = Color::Gray;
 		Snake[score]->Width = step;
 		Snake[score]->Height = step;
 		this->Controls->Add(Snake[score]);
@@ -134,7 +134,7 @@ void GameSnake02::MyForm::NewGame()
 	Snake = gcnew array <PictureBox^, 1>(400);
 	Snake[0] = gcnew PictureBox();
 	Snake[0]->Location = Point(200, 200);
-	Snake[0]->BackColor = Color::Green;
+	Snake[0]->BackColor = Color::Black;
 	Snake[0]->Width = step;
 	Snake[0]->Height = step;
 
@@ -144,7 +144,7 @@ void GameSnake02::MyForm::NewGame()
 
 	//Инициализация фрукта
 	fruit = gcnew PictureBox();
-	fruit->BackColor = Color::Yellow;
+	fruit->BackColor = Color::Red;
 	fruit->Width = step;
 	fruit->Height = step;
 	GeneratePositionFruit();

@@ -1,0 +1,10 @@
+﻿Сборка начата…
+1>------ Сборка начата: проект: Game_Snake0.2, Конфигурация: Debug Win32 ------
+1>MyForm.cpp
+1>C:\Users\User\source\repos\Game_Snake0.2\Game_Snake0.2\MyForm.cpp(7,33): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+1>C:\Users\User\source\repos\Game_Snake0.2\Game_Snake0.2\MyForm.cpp(153,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+1>C:\Users\User\source\repos\Game_Snake0.2\Game_Snake0.2\MyForm.cpp(257,20): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+1>MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+1>Game_Snake0.2.vcxproj -> C:\Users\User\source\repos\Game_Snake0.2\Debug\Game_Snake0.2.exe
+1>Сборка проекта "Game_Snake0.2.vcxproj" завершена.
+========== Сборка: успешно: 1, с ошибками: 0, без изменений: 0, пропущено: 0 ==========

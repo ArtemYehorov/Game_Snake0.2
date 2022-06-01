@@ -54,6 +54,8 @@ namespace GameSnake02 {
 	private: System::Windows::Forms::Label^ labelGameOver;
 	private: System::Windows::Forms::ToolStripMenuItem^ âûõîäToolStripMenuItem2;
 	private: System::Windows::Forms::ToolStripMenuItem^ èíôîðìàöèÿÎÈãðåToolStripMenuItem;
+	private: System::Windows::Forms::Label^ label1;
+
 
 
 	private: System::ComponentModel::IContainer^ components;
@@ -73,6 +75,7 @@ namespace GameSnake02 {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->ìåíþToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->íîâàÿÈãðàToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -95,6 +98,7 @@ namespace GameSnake02 {
 			this->RightBorder = (gcnew System::Windows::Forms::PictureBox());
 			this->timer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->labelGameOver = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			this->groupBoxGameData->SuspendLayout();
 			this->groupBoxSettings->SuspendLayout();
@@ -182,9 +186,11 @@ namespace GameSnake02 {
 			// 
 			// groupBoxGameData
 			// 
+			this->groupBoxGameData->BackColor = System::Drawing::Color::Black;
+			this->groupBoxGameData->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"groupBoxGameData.BackgroundImage")));
 			this->groupBoxGameData->Controls->Add(this->labelScore);
-			this->groupBoxGameData->ForeColor = System::Drawing::SystemColors::MenuHighlight;
-			this->groupBoxGameData->Location = System::Drawing::Point(12, 27);
+			this->groupBoxGameData->ForeColor = System::Drawing::SystemColors::HighlightText;
+			this->groupBoxGameData->Location = System::Drawing::Point(0, 24);
 			this->groupBoxGameData->Name = L"groupBoxGameData";
 			this->groupBoxGameData->Size = System::Drawing::Size(244, 44);
 			this->groupBoxGameData->TabIndex = 2;
@@ -194,9 +200,10 @@ namespace GameSnake02 {
 			// labelScore
 			// 
 			this->labelScore->AutoSize = true;
+			this->labelScore->BackColor = System::Drawing::Color::Transparent;
 			this->labelScore->Font = (gcnew System::Drawing::Font(L"Microsoft Yi Baiti", 11.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->labelScore->ForeColor = System::Drawing::SystemColors::MenuHighlight;
+			this->labelScore->ForeColor = System::Drawing::Color::MintCream;
 			this->labelScore->Location = System::Drawing::Point(6, 16);
 			this->labelScore->Name = L"labelScore";
 			this->labelScore->Size = System::Drawing::Size(49, 15);
@@ -250,7 +257,8 @@ namespace GameSnake02 {
 			// 
 			// UpperBorder
 			// 
-			this->UpperBorder->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->UpperBorder->BackColor = System::Drawing::SystemColors::MenuText;
+			this->UpperBorder->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"UpperBorder.BackgroundImage")));
 			this->UpperBorder->Location = System::Drawing::Point(0, 61);
 			this->UpperBorder->Name = L"UpperBorder";
 			this->UpperBorder->Size = System::Drawing::Size(550, 10);
@@ -259,7 +267,8 @@ namespace GameSnake02 {
 			// 
 			// LowerBorder
 			// 
-			this->LowerBorder->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->LowerBorder->BackColor = System::Drawing::SystemColors::MenuText;
+			this->LowerBorder->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"LowerBorder.BackgroundImage")));
 			this->LowerBorder->Location = System::Drawing::Point(0, 601);
 			this->LowerBorder->Name = L"LowerBorder";
 			this->LowerBorder->Size = System::Drawing::Size(550, 10);
@@ -268,7 +277,8 @@ namespace GameSnake02 {
 			// 
 			// LeftBorder
 			// 
-			this->LeftBorder->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->LeftBorder->BackColor = System::Drawing::SystemColors::MenuText;
+			this->LeftBorder->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"LeftBorder.BackgroundImage")));
 			this->LeftBorder->Location = System::Drawing::Point(0, 61);
 			this->LeftBorder->Name = L"LeftBorder";
 			this->LeftBorder->Size = System::Drawing::Size(10, 550);
@@ -277,7 +287,8 @@ namespace GameSnake02 {
 			// 
 			// RightBorder
 			// 
-			this->RightBorder->BackColor = System::Drawing::SystemColors::MenuHighlight;
+			this->RightBorder->BackColor = System::Drawing::SystemColors::MenuText;
+			this->RightBorder->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"RightBorder.BackgroundImage")));
 			this->RightBorder->Location = System::Drawing::Point(540, 61);
 			this->RightBorder->Name = L"RightBorder";
 			this->RightBorder->Size = System::Drawing::Size(10, 550);
@@ -302,20 +313,34 @@ namespace GameSnake02 {
 			this->labelGameOver->TextAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->labelGameOver->Visible = false;
 			// 
+			// label1
+			// 
+			this->label1->AllowDrop = true;
+			this->label1->AutoEllipsis = true;
+			this->label1->Location = System::Drawing::Point(0, 24);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(550, 40);
+			this->label1->TabIndex = 9;
+			this->label1->Text = L"labelFon";
+			this->label1->UseWaitCursor = true;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(550, 611);
+			this->Controls->Add(this->UpperBorder);
+			this->Controls->Add(this->groupBoxGameData);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->labelGameOver);
 			this->Controls->Add(this->RightBorder);
 			this->Controls->Add(this->LeftBorder);
 			this->Controls->Add(this->LowerBorder);
-			this->Controls->Add(this->UpperBorder);
 			this->Controls->Add(this->groupBoxSettings);
-			this->Controls->Add(this->groupBoxGameData);
 			this->Controls->Add(this->menuStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
